@@ -37,15 +37,15 @@ document.getElementById('submit').addEventListener('click', (event) => {
   let element_add = document.getElementById('add');
   element_add.innerText = ' ';
   if (show_hide == 'hide') {
-    let element_list = document.getElementById('list');
-    element_list.replaceChildren();
-    let element_list2 = document.getElementById('list');
+    let element_fac_list = document.getElementById('fac-list');
+    element_fac_list.replaceChildren();
+    let element_fac_list2 = document.getElementById('fac-list');
     facilitators.forEach((item) => {
-      let element_list3 = document.getElementById('list');
+      let element_list = document.getElementById('list');
       let new_li = document.createElement('li');
       new_li.innerText = item;
 
-      element_list3.appendChild(new_li);
+      element_list.appendChild(new_li);
     });
   }
 
@@ -55,18 +55,18 @@ document.getElementById('show-hide').addEventListener('click', (event) => {
   if (show_hide == 'hide') {
     event.target.innerText = '\\\\ Show full list of facilitators.\\\\';
     show_hide = 'show';
-    let element_list4 = document.getElementById('list');
-    element_list4.replaceChildren();
+    let element_fac_list3 = document.getElementById('fac-list');
+    element_fac_list3.replaceChildren();
   } else {
     event.target.innerText = '\\\\ Hide full list of facilitators.\\\\';
     show_hide = 'hide';
-    let element_list5 = document.getElementById('list');
+    let element_fac_list4 = document.getElementById('fac-list');
     facilitators.forEach((item) => {
-      let element_list6 = document.getElementById('list');
+      let element_fac_list5 = document.getElementById('fac-list');
       let new_li2 = document.createElement('li');
       new_li2.innerText = item;
 
-      element_list6.appendChild(new_li2);
+      element_fac_list5.appendChild(new_li2);
     });
     let element_show_hide = document.getElementById('show-hide');
     element_show_hide.innerText = '\\\\ Hide full list of facilitators.\\\\';
