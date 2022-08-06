@@ -11,15 +11,32 @@
     <body>
         <h1>My CYF Blocks Projects</h1>
         <!-- maybe add a table of contents here...? -->
-        <h2>Don't go higher than 11!</h2>
-        <!-- in the space below here you should paste the 'Static HTML' from your CYF Blocks project page -->
+        
+        <h2>17. Don't go higher than 11!</h2>
         <p>So far you have rolled:</p>
         <ul id="list"></ul>
         <button id="button_roll">Roll the dice</button>
         <p>Total: <span id="total">0</span>. <span id="info">Keep playing!</span></p>
         <button id="button_remove">Remove the last roll</button>
         <button id="button_restart">Start again</button>
+        
         <!----->
-        <script src="script.js"></script>
+       
+        <p>Your Facilitator: <span id="facilitator" style="font-size:22; font-weight:100"></span></p>
+        <p><button id="refresh" style="color:white; background-color:grey; height:25px; font-size:16; border-color:black; padding:5px">Refresh</button></p>
+        <br>
+        <p>Add a new facilitator:
+          <input id="add" type="text">
+          <button id="submit"style="border-color:blue; background-color:blue; height:30px">submit</button>
+        </p>
+        <p>
+          <button style="color:blue; background-color:grey; height:25px;text-transform:none; border-color:black; padding:0" id="show-hide">\\ Show full list of facilitators.\\</button>
+        </p>
+        <p><ol id="list"></ol></p>
+        <!-- js to clear input document.getElementById("add").reset(); -->
+        
+    
+        <script src="script17.js"></script>
+        <script src="script18.js"></script>
     </body>
 </html>
