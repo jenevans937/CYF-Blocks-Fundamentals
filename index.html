@@ -11,7 +11,7 @@
     <body>
         <h1>My CYF Blocks Projects</h1>
         <!-- maybe add a table of contents here...? -->
-        
+<!--------------------------------------------------------------------------------------------------------------------------------------------------->
         <h2>17. Don't go higher than 11!</h2>
         <p>So far you have rolled:</p>
         <ul id="list"></ul>
@@ -20,8 +20,8 @@
         <button id="button_remove">Remove the last roll</button>
         <button id="button_restart">Start again</button>
         
-        <!----->
-       
+<!--------------------------------------------------------------------------------------------------------------------------------------------------->
+        
        <h2>18. Pick a facilitator</h2>
        <p>Your Facilitator: <span id="facilitator" style="font-size:22; font-weight:100"></span></p>
        <p><button id="refresh" style="color:white; background-color:grey; height:25px; font-size:16; border-color:black; padding:5px">Refresh</button></p>
@@ -34,10 +34,49 @@
          <button style="color:blue; background-color:grey; height:25px;text-transform:none; border-color:black; padding:0" id="show-hide">\\ Show full list of facilitators.\\</button>
        </p>
        <p><ol id="fac-list"></ol></p>
-       <!-- js to clear input document.getElementById("add").reset(); -->
-        
     
-        <script src="script17.js"></script>
-        <script src="script18.js"></script>
+<!--------------------------------------------------------------------------------------------------------------------------------------------------->
+<h2>19. Earnings and Expenses </h2>
+<style>
+ li {font-weight:normal; text-align:left; margin: 0; padding: 0;}
+ li:before {content: "£";}
+</style>
+
+<span style="display:flex; flex-direction: row; border: 0px solid white; background:black;">
+  <span style="display:flex; border: 0px solid green; flex-direction:column; justify-content:space-between; flex-grow:1; margin:10px;">
+    <span style="display:flex; border: 0px solid red; vertical-align:top;">Earnings:<br>
+      <ol id="earnings_list" style="list-style-type:none; text-align:left;">
+      </ol>
+    </span>
+    <p id="earnings_total_text" style="display:flex; border: 0px solid cyan; color:black;">Total: £ 
+      <span id="ea_total"></span>
+    </p>
+  </span>
+
+  <span style="display:flex; border: 0px solid green; flex-direction:column; justify-content:space-between;flex-grow:1; margin:10px;">
+    <span style="display:flex; border: 0px solid red; vertical-align:top; text-align:left; justify-;">Expenses:<br>
+      <ol id="expenses_list" style="list-style-type:none;">
+      </ol>
+    </span>
+    <p id="expenses_total_text" style="display:flex; border: 0px solid cyan; color:black;">Total: £ 
+      <span id="ex_total">
+      </span>
+    </p>
+  </span>
+</span>
+
+<p style="display:flex; padding: 5px 25px 5px 25px; border-color:black; background-color:#0e1221; color:white">Net total: £<span id="total">0</span><br><br>
+
+<p id="line1" style="padding: 5px 25px 5px 25px"><label>Add earning: £</label><input id="earning_input" type="number" min="0" step="1.00" value="0.00">  <button id="earning_button" style="height:30px;">submit earning</button></p>
+<p id="line2" style="padding: 5px 25px 5px 25px"><label>Add expense: £</label><input id="expense_input" type="number" placeholder="-0.00"/>  <button id="expense_button" style="height:30px;">submit expense</button></p>
+
+<!--------------------------------------------------------------------------------------------------------------------------------------------------->   
+
+<!-- js to clear input document.getElementById("add").reset(); -->
+        
+<script src="script17.js"></script>
+<script src="script18.js"></script>
+<script src="script19.js"></script>
+    
     </body>
 </html>
