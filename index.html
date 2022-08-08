@@ -40,12 +40,13 @@
 <style>
  li {font-weight:normal; text-align:left; margin: 0; padding: 0;}
  li:before {content: "£";}
+ .b19 {font-family: Courier New, Lucida Console Monospace;}
 </style>
 
-<span style="display:flex; flex-direction: row; border: 0px solid white; background:black;">
+<span class="b19" style="display:flex; flex-direction: row; border: 0px solid white; background:black; font-weight:bold">
   <span style="display:flex; border: 0px solid green; flex-direction:column; justify-content:space-between; flex-grow:1; margin:10px;">
-    <span style="display:flex; border: 0px solid red; vertical-align:top;">Earnings:<br>
-      <ol id="earnings_list" style="list-style-type:none; text-align:left;">
+    <span style="display:flex; border: 0px solid red; vertical-align:top;justify-content:space-between">Earnings:<br>
+      <ol id="earnings_list" style="list-style-type:none; text-align:left;font-weight:normal">
       </ol>
     </span>
     <p id="earnings_total_text" style="display:flex; border: 0px solid cyan; color:black;">Total: £ 
@@ -53,9 +54,9 @@
     </p>
   </span>
 
-  <span style="display:flex; border: 0px solid green; flex-direction:column; justify-content:space-between;flex-grow:1; margin:10px;">
-    <span style="display:flex; border: 0px solid red; vertical-align:top; text-align:left; justify-;">Expenses:<br>
-      <ol id="expenses_list" style="list-style-type:none;">
+  <span class="b19" style="display:flex; border: 0px solid green; flex-direction:column; justify-content:space-between;flex-grow:1; margin:10px; font-weight:bold">
+    <span style="display:flex; border: 0px solid red; vertical-align:top; text-align:left; justify-content:space-between;">Expenses:<br>
+      <ol id="expenses_list" style="list-style-type:none; font-weight:normal;">
       </ol>
     </span>
     <p id="expenses_total_text" style="display:flex; border: 0px solid cyan; color:black;">Total: £ 
@@ -65,10 +66,25 @@
   </span>
 </span>
 
-<p style="display:flex; padding: 5px 25px 5px 25px; border-color:black; background-color:#0e1221; color:white">Net total: £<span id="total">0</span><br><br>
 
-<p id="line1" style="padding: 5px 25px 5px 25px"><label>Add earning: £</label><input id="earning_input" type="number" min="0" step="1.00" value="0.00">  <button id="earning_button" style="height:30px;">submit earning</button></p>
-<p id="line2" style="padding: 5px 25px 5px 25px"><label>Add expense: £</label><input id="expense_input" type="number" placeholder="-0.00"/>  <button id="expense_button" style="height:30px;">submit expense</button></p>
+<p class="b19" style="display:flex; padding: 5px 25px 5px 25px; border-color:black; background-color:#0e1221; color:white">Net total: £<span id="total">0</span></p>
+<br>
+<br>
+
+<p class="b19" id="line1" style="padding: 5px 25px 5px 25px">
+  <label style="font-weight:bold">Add earning: £</label>
+  <input id="earning_input" type="number" min="0" step="1.00" value="0.00">
+  <button id="earning_button" style="height:30px; text-transform:uppercase; font-weight:normal; font-size:12">submit earning
+  </button>
+</p>
+
+<p class="b19" id="line2" style="padding: 5px 25px 5px 25px">
+  <label style="font-weight:bold">Add expense: £</label>
+  <input id="expense_input" type="number" placeholder="-0.00">
+  <button id="expense_button" style="height:30px; text-transform:uppercase; font-weight:normal; font-size:12">submit expense
+  </button>
+</p>
+</span>
 
 <!--------------------------------------------------------------------------------------------------------------------------------------------------->   
 
